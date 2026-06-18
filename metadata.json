@@ -1,0 +1,6 @@
+{
+  "name": "E-Commerce Store",
+  "description": "A high-performance modern e-commerce application featuring a fast product catalog, search and filtering, product details, interactive image gallery, user reviews, shopping cart, and checkout simulator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
