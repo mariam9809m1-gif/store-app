@@ -42,7 +42,8 @@ export interface FilterOptions {
   minPrice: number;
   maxPrice: number;
   minRating: number;
-  sortBy: 'featured' | 'price-low-to-high' | 'price-high-to-low' | 'avg-customer-review';
+  primeOnly: boolean;
+  sortBy: 'featured' | 'price-low-to-high' | 'price-high-to-low' | 'avg-customer-review' | 'best-seller';
 }
 
 export interface ShippingAddress {
@@ -61,6 +62,18 @@ export interface PaymentDetails {
   cardName: string;
   expiryDate: string;
   cvv: string;
+}
+
+export interface User {
+  name: string;
+  email: string;
+  avatar?: string;
+}
+
+export interface Toast {
+  id: string;
+  message: string;
+  type: 'success' | 'info' | 'error';
 }
 
 export type ViewType = 'catalog' | 'product-details' | 'cart' | 'checkout' | 'order-success';
