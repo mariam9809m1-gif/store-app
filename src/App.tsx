@@ -8,6 +8,7 @@ import { useStore } from './store/useStore';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ToastContainer from './components/ToastContainer';
+import CartDrawer from './components/CartDrawer';
 import CatalogPage from './pages/CatalogPage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import CartPage from './pages/CartPage';
@@ -58,6 +59,7 @@ export default function App() {
       {/* Corporate Footings links */}
       <Footer />
       <ToastContainer />
+      <CartDrawer />
     </div>
   );
 }

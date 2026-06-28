@@ -9,7 +9,7 @@ import { useStore } from '../store/useStore';
 import { CATEGORIES } from '../services/productService';
 
 export default function Navbar() {
-  const { cart, filters, updateFilters, setView, selectProduct } = useStore();
+  const { cart, filters, updateFilters, setView, selectProduct, openCartDrawer } = useStore();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -129,10 +129,7 @@ export default function Navbar() {
 
           {/* Shopping Cart Trigger Indicator */}
           <div 
-            onClick={() => {
-              selectProduct(null);
-              setView('cart');
-            }}
+            onClick={openCartDrawer}
             className="flex items-end gap-1 px-2.5 py-1.5 hover:ring-1 hover:ring-white rounded cursor-pointer transition-all select-none relative group font-sans"
             id="nav-cart-trigger"
           >
